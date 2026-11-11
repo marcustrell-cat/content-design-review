@@ -37,7 +37,7 @@ The report ends with a short summary and the scope it covered. The full format i
 Install it as a project skill. From the root of the project you want to review:
 
 ```bash
-git clone https://github.com/<you>/content-design-review.git /tmp/content-design-review
+git clone https://github.com/marcustrell-cat/content-design-review.git /tmp/content-design-review
 ```
 
 ```bash
