@@ -23,6 +23,12 @@ Every check has an ID and a type:
 If you can't point to the text and explain the failure without "I'd prefer", it is
 not Hard.
 
+A suggestion still needs a cost to the person that you can name: the text could be
+misread, it hides what happened, it's hard to scan because it's long or
+inconsistent, or it clashes with its moment. "I'd word it differently" is not a
+cost. Neither is not knowing whether a choice was deliberate: if that matters, ask
+instead. When the copy already works, "No suggestions" is the right result.
+
 Examples are illustrations, not templates. Don't copy their wording into a review.
 Write rewrites from the product's own facts.
 
@@ -104,8 +110,8 @@ and get them moving.
   is possible from this screen.
 - EMP-3. Weak: "No results" after a search for "zebra". Better: "No matches for
   'zebra'. Check the spelling or clear the filters."
-- EMP-4 (Pref). "Your inbox is calm today ☀️" can suit a consumer app. Flag it only
-  with the audience you assume.
+- EMP-4 (Pref). "Your inbox is calm today ☀️" can suit a consumer app. Leave it
+  alone unless it doesn't fit the audience the project describes.
 
 ---
 
@@ -168,7 +174,7 @@ moment. Check fit, not taste.
 | TONE-1 | Hard | Tone fits the stakes. Jokes, cheer or emoji fail where someone may lose data, money or access, or is dealing with something sensitive. |
 | TONE-2 | Hard | No shouting: no ALL-CAPS sentences, no stacked exclamation marks, no "WARNING" for routine events. |
 | TONE-3 | Hard | How the product speaks to people stays steady (for example "you" throughout, and one level of formality per language). |
-| TONE-4 | Pref | Overall voice (playful, plain, formal, warm). Without a voice guide, suggest a change only with the audience you assume. Never impose a single "correct" voice. |
+| TONE-4 | Pref | Overall voice (playful, plain, formal, warm). A voice that stays consistent, keeps out of high-stakes moments and suits the audience the project describes needs no change, even without a voice guide. Suggest a change only for a line with a cost you can name, and say which audience you assume. Never impose a single "correct" voice. |
 
 **Examples**
 
@@ -179,8 +185,8 @@ moment. Check fit, not taste.
   using your account."
 - TONE-3. Weak: onboarding says "Hey friend!" while settings say "The user may
   configure…". Better: pick one way to address people.
-- TONE-4 (Pref). "Let's get cooking!" on a recipe app may be on-brand. Note it only
-  as a suggestion, with the assumption.
+- TONE-4 (Pref). "Let's get cooking!" on a recipe app's start screen may be
+  on-brand, so leave it. The same cheer on a failed payment fails TONE-1.
 
 ---
 

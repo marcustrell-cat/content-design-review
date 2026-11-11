@@ -129,17 +129,34 @@ translation quality.
 │       ├── heuristics.md          # the checks, with examples
 │       └── output-format.md       # finding fields and report template
 ├── examples/before-after.md       # three rewrites with reasons
-├── fixtures/bad-copy-app/         # tiny static app with weak copy, for testing
-└── tests/fixture-checklist.md     # expected findings and how to run the test
+├── fixtures/
+│   ├── bad-copy-app/              # tiny static app with weak copy
+│   ├── good-copy-app/             # tiny static app whose copy already works
+│   └── warm-copy-app/             # the same app with a warm, playful voice
+└── tests/
+    ├── bad-copy-checklist.md      # what a run must catch, and how to run it
+    ├── good-copy-checklist.md     # false-positive test: what a run must not flag
+    └── warm-copy-checklist.md     # false-positive test for voice suggestions
 ```
 
 ## Test
 
-`fixtures/bad-copy-app/` is a small static app with deliberately weak copy.
-[`tests/fixture-checklist.md`](tests/fixture-checklist.md) lists what a run must
-catch, what it may catch, and what it must never do, such as inventing features.
-It also has the run command, which reviews a temporary copy so the skill can't read
-the expected answers.
+There are three fixtures, and a change to the skill should pass all of them:
+
+- `fixtures/bad-copy-app/` is a small static app with deliberately weak copy.
+  [`tests/bad-copy-checklist.md`](tests/bad-copy-checklist.md) lists what a run must
+  catch, what it may catch, and what it must never do, such as inventing features.
+- `fixtures/good-copy-app/` is a small static app whose copy already follows the
+  heuristics. [`tests/good-copy-checklist.md`](tests/good-copy-checklist.md) counts
+  every finding as a false positive. A run passes with no major findings and at
+  most two minor ones.
+- `fixtures/warm-copy-app/` is the same app with a warm, playful voice in its
+  low-stakes moments. [`tests/warm-copy-checklist.md`](tests/warm-copy-checklist.md)
+  checks that the skill leaves a voice that suits its audience alone, with the same
+  pass rule.
+
+Each checklist has a run command that reviews a temporary copy, so the skill can't
+read the expected answers.
 
 ## Limitations
 

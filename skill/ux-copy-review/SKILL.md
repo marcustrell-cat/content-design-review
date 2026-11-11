@@ -25,7 +25,8 @@ If the target is empty, review the app's main user-facing source.
   docs or the person confirms. Read what a handler actually does before you rewrite
   its label or its error. When a fact is missing, use a `[placeholder]` and log it.
 - **No universal voice.** If the project has a style guide, glossary or voice notes,
-  follow them. Otherwise judge fit for the moment, and treat voice as a suggestion.
+  follow them. Otherwise judge fit for the moment. A consistent voice that suits the
+  audience needs no change, and a voice change is only ever a suggestion.
 - **Separate failures from preferences.** A Hard check failure is a confirmed
   problem. A Pref check is a suggestion with its assumption stated.
 

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprig</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Welcome: shown on first visit only -->
+  <section id="welcome" class="screen" hidden>
+    <h1>Hello, plant person <span aria-hidden="true">🌱</span></h1>
+    <p>Tell Sprig about your plants and how often they like a drink. It'll remember when you last watered each one, so you don't have to.</p>
+    <p class="small">Everything stays in this browser, on this device only.</p>
+    <div class="actions">
+      <button id="welcome-add">Add your first plant</button>
+      <button id="welcome-skip" class="secondary">Skip for now</button>
+    </div>
+  </section>
+
+  <!-- Plant list -->
+  <section id="main" class="screen" hidden>
+    <header>
+      <h1>Your plants</h1>
+      <button id="download" class="secondary">Download spreadsheet (CSV)</button>
+      <button id="open-form"><span aria-hidden="true">+</span> Add plant</button>
+    </header>
+    <p id="list-error" class="error" role="alert"></p>
+
+    <div id="empty" class="empty">
+      <h2>No plants yet</h2>
+      <p>Add one, and Sprig will remember when it last had a drink.</p>
+      <button id="empty-add">Add plant</button>
+    </div>
+
+    <div id="load-error" class="empty" hidden>
+      <h2>Couldn't load your plants</h2>
+      <p>Reload the page to try again. If that doesn't work, check that your browser lets this site store data.</p>
+      <button id="reload">Reload page</button>
+    </div>
+
+    <ul id="list"></ul>
+  </section>
+
+  <!-- Add form -->
+  <section id="form-screen" class="screen" hidden>
+    <h1>Add plant</h1>
+    <form id="plant-form" novalidate>
+      <div class="field">
+        <label for="name">Plant name</label>
+        <p id="name-error" class="error" role="alert"></p>
+        <input id="name" autocomplete="off" aria-describedby="name-error">
+      </div>
+      <div class="field">
+        <label for="interval">Days between waterings</label>
+        <p id="interval-hint" class="hint">A whole number from 1 to 60.</p>
+        <p id="interval-error" class="error" role="alert"></p>
+        <input id="interval" type="number" inputmode="numeric" min="1" max="60" step="1" aria-describedby="interval-hint interval-error">
+      </div>
+      <div class="field">
+        <label for="notes">Notes (optional)</label>
+        <p id="notes-hint" class="hint">Where it sits, how it's doing, anything worth remembering.</p>
+        <textarea id="notes" rows="3" aria-describedby="notes-hint"></textarea>
+      </div>
+      <p id="save-error" class="error" role="alert"></p>
+      <div class="actions">
+        <button type="submit">Save plant</button>
+        <button type="button" id="cancel" class="secondary">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Delete confirmation -->
+  <div id="confirm" class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-body" hidden>
+    <h2 id="confirm-title">Delete this plant?</h2>
+    <p id="confirm-body">You can't undo this.</p>
+    <div class="actions">
+      <button id="confirm-delete">Delete plant</button>
+      <button id="confirm-keep" class="secondary">Keep plant</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

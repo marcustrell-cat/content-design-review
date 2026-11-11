@@ -1,7 +1,10 @@
 # Fixture test: `fixtures/bad-copy-app`
 
 A manual test for the skill. Run the review against the fixture, then score the
-output against the lists below.
+output against the lists below. Its partners,
+[`good-copy-checklist.md`](good-copy-checklist.md) and
+[`warm-copy-checklist.md`](warm-copy-checklist.md), check that the skill doesn't
+flag copy that already works.
 
 The expected findings live here, outside the fixture folder, so the review isn't
 primed. Run it in a temporary copy so the skill can't read this file.
@@ -112,3 +115,11 @@ and read nothing outside that folder.
 | 2026-11-10 | draft 3 (run G, Opus) | 18/18 | 10/10 | none | 9 major, 15 minor, 3 nit. All cited lines correct. |
 | 2026-11-10 | v0.1: draft 3 + grep check for lines (run H, Sonnet) | 18/18 | 8/10 (missed N6, N7) | none | 7 major, 16 minor, 2 nit. All cited lines correct. One rewrite puts the date format only in a placeholder. |
 | 2026-11-11 | v0.1 (desktop Code session in a temp folder, typed `/content-design-review bad-copy-app`) | 18/18 | 10/10 | none | 10 major, 11 minor, 1 nit confirmed; 3 suggestions. All checked lines correct. Filed "Let's Go!" (ACT-1) as an ACT-5 suggestion. Its one question (sighting or observation) was already settled by its own analysis. |
+| 2026-11-11 | v0.1 + Pref cost rule (run S, Opus, subagent) | 18/18 | 9/10 (missed N10) | none | 9 major, 13 minor, 1 nit confirmed; 1 suggestion (ONB-5, with `Assumes`). All checked lines correct. The "every great birder" line was folded into the ONB finding for its step, so no separate voice suggestion was filed. |
+| 2026-11-11 | v0.1 + Pref cost rule (run T, Sonnet, subagent) | 18/18 | 8/10 (missed N7, N10) | none | 11 major, 12 minor confirmed; no suggestions. All checked lines correct. Same N10 pattern as run S. |
+
+N10 assumes voice lines are filed on their own. After the Pref cost rule, both runs
+folded them into the Hard finding for the same text instead, as `output-format.md`
+asks ("Don't file the same text twice"). Decided 2026-11-11: N10 stays strict. A
+voice line folded into another finding doesn't count, so runs S and T are scored as
+missing N10. N10 is a score, not a gate, so neither run fails.

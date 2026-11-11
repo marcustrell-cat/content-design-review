@@ -108,8 +108,8 @@ suggestions."). Never leave out Reviewed scope.
   Original and use the line number Grep returns. Never work out line numbers by
   counting or by the spacing between elements.
 - Every `Original` appears word for word in that file.
-- Every confirmed finding names a Hard check. Every suggestion names a Pref check
-  and has `Assumes`.
+- Every confirmed finding names a Hard check. Every suggestion names a Pref check,
+  has `Assumes`, and names a cost to the person, not just a different wording.
 - No rewrite states a fact you didn't find in the source or docs.
 - At most one question.
 - You changed no files.
