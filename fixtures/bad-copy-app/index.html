@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Log</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Onboarding: shown on first visit only -->
+  <section id="onboarding" class="screen">
+    <div class="step" data-step="1">
+      <h1>Welcome to Field Log!!!</h1>
+      <p>Field Log is the ultimate next-generation platform for nature enthusiasts, hobbyists, scientists and everyone in between who has ever looked up at the sky and wondered what that bird was. Our mission is to empower birders everywhere with best-in-class tools for capturing, organizing and reliving every observation, so that no moment in nature is ever lost again. Whether you're a total beginner or a seasoned expert, Field Log adapts to the way you work.</p>
+      <button class="next">Next</button>
+    </div>
+    <div class="step" data-step="2" hidden>
+      <h2>Powerful features</h2>
+      <p>Log entries with species, date, location and notes. Sync your records across all your devices automatically. Share observations with friends and the Field Log community. Export your data whenever you want. Get smart species suggestions powered by AI.</p>
+      <button class="next">Next</button>
+    </div>
+    <div class="step" data-step="3" hidden>
+      <h2>Before you begin</h2>
+      <p>To get the most out of Field Log, please make sure to read our community guidelines, set up your profile, and think about which birds you want to track this season. You can always change your mind later. Remember: every great birder started with a single sighting!</p>
+      <button class="next">Next</button>
+    </div>
+    <div class="step" data-step="4" hidden>
+      <h2>You're all set</h2>
+      <p>Click the button below to continue to the app.</p>
+      <button id="finish-onboarding">Let's Go!</button>
+    </div>
+  </section>
+
+  <!-- Main list -->
+  <section id="main" class="screen" hidden>
+    <header>
+      <h1>My Log</h1>
+      <button id="export" class="secondary">Go</button>
+      <button id="open-form" class="icon">+</button>
+    </header>
+    <p id="empty" class="empty">No data.</p>
+    <ul id="list"></ul>
+  </section>
+
+  <!-- Add form -->
+  <section id="form-screen" class="screen" hidden>
+    <h2>New Record</h2>
+    <form id="entry-form" novalidate>
+      <input id="species" placeholder="Species">
+      <input id="date" placeholder="Date">
+      <input id="coords" placeholder="Geo-coordinates (WGS84 decimal)">
+      <textarea id="notes" placeholder="Notes"></textarea>
+      <p id="form-error" class="error"></p>
+      <button type="submit">Submit</button>
+      <button type="button" id="cancel-form">Back</button>
+    </form>
+  </section>
+
+  <!-- Delete confirmation -->
+  <div id="confirm" class="dialog" role="dialog" hidden>
+    <p>Are you sure?</p>
+    <button id="confirm-yes">Yes</button>
+    <button id="confirm-no">No</button>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
