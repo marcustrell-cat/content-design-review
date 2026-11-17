@@ -54,10 +54,12 @@ If the target is empty, review the app's main user-facing source.
 5. **Run the checks.** Load [references/heuristics.md](references/heuristics.md) and
    apply every group: ACT, ERR, EMP, ONB, TERM, TONE, A11Y and PLAIN. For TERM, list
    every name used for each core object and action, with locations, before judging.
-6. **Classify.** Mark each finding as confirmed (Hard) or suggestion (Pref). Give it
+6. **Filter.** Run "Before you file a finding" in `heuristics.md` on every
+   candidate: the drop gate, then the context and audience check. Drop what fails.
+7. **Classify.** Mark each finding as confirmed (Hard) or suggestion (Pref). Give it
    a severity from the guide in `heuristics.md`, then run that guide's calibration
    check.
-7. **Write the report.** Follow
+8. **Write the report.** Follow
    [references/output-format.md](references/output-format.md) exactly, then run its
    "Before you send" checks.
 
