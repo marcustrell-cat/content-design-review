@@ -98,7 +98,15 @@ subagent in a temporary folder, the same way as the 2026-11-10 bad-copy runs.
 | 2026-11-11 | v0.1, same fixture (run P, Sonnet) | 0 | 0 | 0 | none | None. One question: can saved data become unreadable? If so, the load error would need to say what happens to it. |
 | 2026-11-11 | v0.1 + Pref cost rule (run U, Opus) | 0 | 0 | 0 | none | None. No question. |
 | 2026-11-11 | v0.1 + Pref cost rule (run V, Sonnet) | 0 | 0 | 0 | none | None. No question. |
+| 2026-11-17 | v0.2 (run 2C, Opus) | 0 | 0 | 0 | none | None. No question. |
+| 2026-11-17 | v0.2 (run 2D, Sonnet) | 0 | 0 | 0 | none | None. No question. |
+| 2026-11-17 | v0.2 + tighter context check (run 3D, Opus) | 0 | 0 | 0 | none | None. No question. |
+| 2026-11-17 | v0.2 + tighter context check (run 3E, Sonnet) | 0 | 0 | 0 | none | None. No question. |
 
 All eight runs pass, and the Pref checks never filed anything here. The Pref cost rule
 came from the warm-copy test ([`warm-copy-checklist.md`](warm-copy-checklist.md)).
 Runs U and V show it didn't change this result.
+
+v0.2 (2026-11-17): both runs clean.
+
+v0.2 + tighter context check (2026-11-17): both runs clean. The stricter check added no false positives.

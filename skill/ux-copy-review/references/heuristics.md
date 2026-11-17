@@ -34,14 +34,24 @@ instead. When the copy already works, "No suggestions" is the right result.
 Run two checks on every finding, Hard or Pref. If either one fails, drop the
 finding. Don't soften it into a suggestion.
 
-1. **Drop gate.** Read your own Issue line. If it says the copy works in context,
-   the cost is small, the case is weak, or the choice may be deliberate, drop it.
-   If your Rewrite is the same text as the Original, drop it. A finding you have
-   to argue for is not a finding.
+1. **Drop gate.** Read your own Issue line. If it says the copy works in context
+   (check 2 says when context counts), the cost is small, the case is weak, or the
+   choice may be deliberate, drop it. If your Rewrite is the same text as the
+   Original, drop it. A finding you have to argue for is not a finding.
 2. **Context and audience.** This check applies only to ACT-1 and ACT-3. Read
-   what sits around the label or link: the dialog title, the description, the
-   heading. If they already say what the label leaves out, the string works, so
-   drop the finding. Empty states, errors and other checks don't get this pass.
+   what sits next to the label or link, in the same dialog, step or form: the
+   title, the description, the heading. If that text says what the control does,
+   and to what, the label works, so drop the finding.
+
+   Context doesn't count when it only names the screen or tells people to press
+   the button. A form headed "New expense" doesn't say whether `Confirm` saves a
+   draft or sends it for approval.
+
+   This pass never clears a control that saves, sends, confirms, deletes or
+   pays. People act on those labels directly, and screen reader users often hear
+   the label without what surrounds it, so the label must name the result. Empty
+   states, errors and other checks don't get this pass either.
+
    For PLAIN-1, name the audience first. A term that is standard for that
    audience (for example "API key" or "SQL" in a developer tool) is not jargon.
 

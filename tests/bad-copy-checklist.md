@@ -117,9 +117,18 @@ and read nothing outside that folder.
 | 2026-11-11 | v0.1 (desktop Code session in a temp folder, typed `/content-design-review bad-copy-app`) | 18/18 | 10/10 | none | 10 major, 11 minor, 1 nit confirmed; 3 suggestions. All checked lines correct. Filed "Let's Go!" (ACT-1) as an ACT-5 suggestion. Its one question (sighting or observation) was already settled by its own analysis. |
 | 2026-11-11 | v0.1 + Pref cost rule (run S, Opus, subagent) | 18/18 | 9/10 (missed N10) | none | 9 major, 13 minor, 1 nit confirmed; 1 suggestion (ONB-5, with `Assumes`). All checked lines correct. The "every great birder" line was folded into the ONB finding for its step, so no separate voice suggestion was filed. |
 | 2026-11-11 | v0.1 + Pref cost rule (run T, Sonnet, subagent) | 18/18 | 8/10 (missed N7, N10) | none | 11 major, 12 minor confirmed; no suggestions. All checked lines correct. Same N10 pattern as run S. |
+| 2026-11-17 | v0.2 (run 2A, Opus, subagent) | 18/18 | 8/10 (missed N8, N10) | none | 1 blocker, 9 major, 9 minor, 2 nit confirmed; 1 suggestion (ONB-5, with `Assumes`). All checked lines correct. First run to rate the date error a blocker (earlier runs said major). |
+| 2026-11-17 | v0.2 (run 2B, Sonnet, subagent) | 17/18 (missed M2) | 5/10 (missed N3, N6, N7, N9, N10) | X12 | **Fails.** Never mentions `Submit`. It skipped "Let's Go!" explicitly because "its heading and body already say it opens the app", which is v0.2's context check for ACT-1. `Submit` under the "New Record" heading was probably dropped the same way. Cited `app.js:108` for the CSV header on line 107. Noted the load-failure case under Not covered but didn't file it. Fixed the 🗑 button's name only in passing, inside the TERM finding. 10 major, 10 minor, 1 nit; no suggestions. |
+| 2026-11-17 | v0.2 + tighter context check (run 3A, Opus, subagent) | 18/18 | 7/10 (missed N7, N8, N10) | none | 7 major, 15 minor, 1 nit confirmed; 1 suggestion. All checked lines correct. Caught `Submit`: "A save button has to name its result." Listed what its filters dropped: "Next" in onboarding, and "Nothing to export." (N8, dropped by the drop gate as a small cost). Filed "Let's Go!" as part of a suggestion. |
+| 2026-11-17 | v0.2 + tighter context check (run 3B, Sonnet, subagent) | 18/18 | 7/10 (missed N7, N8, N10) | none | 10 major, 10 minor confirmed; no suggestions. All checked lines correct. Caught `Submit` ("The heading doesn't settle that") and "Let's Go!" (ACT-1). Its location rewrite gives no example. Put its minor findings under a heading after Suggestions, out of the template's order. |
+| 2026-11-17 | v0.2 + tighter context check (run 3C, Sonnet, subagent) | 18/18 | 7/10 (missed N7, N8, N10) | none | 7 major, 15 minor, 1 nit confirmed; no suggestions. All checked lines correct. Caught `Submit`: "The heading doesn't clear this label, because the control saves." |
 
 N10 assumes voice lines are filed on their own. After the Pref cost rule, both runs
 folded them into the Hard finding for the same text instead, as `output-format.md`
 asks ("Don't file the same text twice"). Decided 2026-11-11: N10 stays strict. A
 voice line folded into another finding doesn't count, so runs S and T are scored as
 missing N10. N10 is a score, not a gate, so neither run fails.
+
+v0.2 (2026-11-17): Opus passed and Sonnet failed. The Sonnet misses (`Submit`, "Let's Go!") come from the new context check, which lets a heading clear a generic ACT-1 label. Two runs aren't enough to call it, but the run's own reasoning shows the mechanism.
+
+v0.2 + tighter context check (2026-11-17): all three runs pass, including both Sonnet runs. N8 is now missed in all three, since the drop gate treats "Nothing to export." as a small cost.

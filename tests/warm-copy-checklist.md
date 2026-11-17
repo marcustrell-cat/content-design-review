@@ -80,7 +80,15 @@ Code subagents in temporary folders, as in the other logs.
 | 2026-11-11 | v0.1, fixture with both fixes (run R, Sonnet) | 0 | 0 | 2 | none, W4 close | TONE-4, taste, twice, filed in case the voice wasn't deliberate. One rewrote "Monstera is watered for today. Nice work." to the plain good-copy toast (the wording was clumsy, so the fixture now says "has been watered"). The other rewrote "Welcome, Monstera! It's on your list now." to "Monstera added to your list." Its question said to drop both if the voice is deliberate. Led to the cost rule for Pref checks. |
 | 2026-11-11 | v0.1 + Pref cost rule, toast now "has been watered" (run W, Opus) | 0 | 1 | 0 | none | ACT-6, overreach: "Not watered yet" on a new plant reads as a fact the app can't know. But the person has just added the plant, and the same string passed all eight good-copy runs. Left in the fixture. No voice suggestions, no question. |
 | 2026-11-11 | v0.1 + Pref cost rule, same fixture (run Y, Sonnet) | 0 | 0 | 0 | none | None. Said "No suggestions": the warm voice is consistent, suits the audience and stays out of high-stakes moments. No question. |
+| 2026-11-17 | v0.2 (run 2E, Opus) | 0 | 0 | 0 | none | None. Left the voice alone, and read "a drink" as voice rather than a second name for watering. No question. |
+| 2026-11-17 | v0.2 (run 2F, Sonnet) | 0 | 0 | 0 | none | None. Left the voice alone. No question. |
+| 2026-11-17 | v0.2 + tighter context check (run 3F, Opus) | 0 | 0 | 0 | none | None. Left the voice alone. No question. |
+| 2026-11-17 | v0.2 + tighter context check (run 3G, Sonnet) | 0 | 0 | 0 | none | None. Left the voice alone. No question. |
 
 All six runs pass. Before the cost rule, Sonnet filed two voice nits in case the voice
 wasn't deliberate (run R). After it, run Y filed none. Opus left the voice alone in
 every run.
+
+v0.2 (2026-11-17): both runs clean. The "Not watered yet" false alarm from run W didn't recur.
+
+v0.2 + tighter context check (2026-11-17): both runs clean.

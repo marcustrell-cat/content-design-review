@@ -1,3 +1,7 @@
+## Unreleased
+
+- **Tighter context check.** The surrounding text clears an ACT-1 or ACT-3 label only when it says what the control does, and to what. A heading that only names the screen, or text that only says to press the button, doesn't count. The check never clears a control that saves, sends, confirms, deletes or pays. In the v0.2 fixture tests, a Sonnet run used the old wording to clear the bad-copy fixture's `Submit` (a must-catch item) and "Let's Go!". With the new wording, all seven re-runs pass: bad copy 18/18 on Opus and on two Sonnet runs, and no findings on the good-copy and warm-voice fixtures.
+
 ## v0.2 — 2026-11-17
 
 Quieter reviews. Tested on 500 random PostHog UI strings (3 runs).
