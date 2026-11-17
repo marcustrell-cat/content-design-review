@@ -29,6 +29,33 @@ inconsistent, or it clashes with its moment. "I'd word it differently" is not a
 cost. Neither is not knowing whether a choice was deliberate: if that matters, ask
 instead. When the copy already works, "No suggestions" is the right result.
 
+### Before you file a finding
+
+Run two checks on every finding, Hard or Pref. If either one fails, drop the
+finding. Don't soften it into a suggestion.
+
+1. **Drop gate.** Read your own Issue line. If it says the copy works in context,
+   the cost is small, the case is weak, or the choice may be deliberate, drop it.
+   If your Rewrite is the same text as the Original, drop it. A finding you have
+   to argue for is not a finding.
+2. **Context and audience.** This check applies only to ACT-1 and ACT-3. Read
+   what sits around the label or link: the dialog title, the description, the
+   heading. If they already say what the label leaves out, the string works, so
+   drop the finding. Empty states, errors and other checks don't get this pass.
+   For PLAIN-1, name the audience first. A term that is standard for that
+   audience (for example "API key" or "SQL" in a developer tool) is not jargon.
+
+Two things never go through the drop gate's "works in context" test:
+
+- **TERM findings.** Two names for one thing on screen is always a finding, even
+  when each name makes sense alone.
+- **Generated messages.** Errors and validation messages a person can see count as
+  UI copy, even when a library or schema writes them. Review them like any other
+  error. File them once per pattern, not once per string: one finding for
+  "must be equal to one of the allowed values", with every place it appears under
+  `Where`. Point the rewrite at where the messages are made (the validator's
+  error mapping), not at each copy of the string.
+
 Examples are illustrations, not templates. Don't copy their wording into a review.
 Write rewrites from the product's own facts.
 
