@@ -8,7 +8,9 @@ were never reviewed. It reads the UI source, checks each string against a set of
 generic heuristics, and reports what to change. It doesn't edit anything unless you
 ask.
 
-**Status:** v0.1. English UI text only. See [Limitations](#limitations).
+**Status:** v0.2. Tested on 500 real UI strings — see
+[How quiet it is](#how-quiet-it-is). English UI text only. See
+[Limitations](#limitations).
 
 ## What you get
 
@@ -29,8 +31,25 @@ Findings come in two groups:
 - **Suggestions**: voice and style choices that depend on your audience. Each one
   states what it assumes.
 
+Before a finding is filed, the skill rereads its own reasoning. If the copy works in
+context, the cost of leaving it is small, or the rewrite equals the original, the
+finding is dropped. Weak cases no longer get softened into suggestions.
+
 The report ends with a short summary and the scope it covered. The full format is in
 [`output-format.md`](skill/ux-copy-review/references/output-format.md).
+
+## How quiet it is
+
+The v0.2 benchmark ran the skill over 500 random UI strings from PostHog's app, in
+three separate runs:
+
+- v0.1 flagged 7.8% of the strings (one run).
+- v0.2 flagged 4.6% on average, between 3.6% and 5.6% across the three runs.
+
+The drop gate is what changed. A lower flag rate only matters if quiet doesn't turn
+into blind: a change to the skill must still catch all 18 planted issues in the
+bad-copy fixture and stay clean on the other two. The method and the full numbers
+are in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Install
 
@@ -123,6 +142,7 @@ translation quality.
 .
 ├── README.md
 ├── LICENSE
+├── CHANGELOG.md
 ├── skill/ux-copy-review/          # the skill (install as content-design-review)
 │   ├── SKILL.md
 │   └── references/
@@ -163,9 +183,15 @@ read the expected answers.
 - The heuristics are written for English UI text.
 - It reviews strings in source and locale files. It can't see text built on a
   server at runtime, text inside images, or emails it can't find in the repo.
-- Like any model output, results vary between runs. Treat the report as a review
-  from a careful colleague, not a test suite.
+- Like any model output, results vary between runs — on the benchmark, between 3.6%
+  and 5.6% of strings flagged. Treat the report as a review from a careful
+  colleague, not a test suite.
 - On large codebases, give it a target folder.
+
+## Case study
+
+Why the skill flags only what it can prove, and how it was built:
+[marcustrell.cat/work/content-design-review](https://marcustrell.cat/work/content-design-review).
 
 ## License
 
