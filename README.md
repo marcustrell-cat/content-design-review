@@ -188,6 +188,13 @@ read the expected answers.
   colleague, not a test suite.
 - On large codebases, give it a target folder.
 
+## Coming next
+
+**Voice extraction.** A skill that reads your product's existing copy, writes a
+`voice.md` and flags where the copy contradicts itself. This skill then uses that
+file as your house style. To hear when it ships, subscribe to
+[issue #3](https://github.com/marcustrell-cat/content-design-review/issues/3).
+
 ## Case study
 
 Why the skill flags only what it can prove, and how it was built:
